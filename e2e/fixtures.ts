@@ -10,7 +10,11 @@ export const test = base.extend<{ consoleGuard: void }>({
     async ({ page }, use) => {
       const errors: string[] = [];
       page.on('console', (msg) => {
-        if (msg.type() === 'error') errors.push(msg.text());
+        if (msg.type() !== 'error') return;
+        // Сторонний GitHub API (звёзды Angular на главной) — его лимиты/сеть не наша ошибка.
+        const url = msg.location()?.url ?? '';
+        if (url.includes('github.com') || msg.text().includes('github.com')) return;
+        errors.push(msg.text());
       });
       page.on('pageerror', (err) => errors.push(err.message));
 

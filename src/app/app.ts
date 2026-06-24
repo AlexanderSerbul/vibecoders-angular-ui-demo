@@ -24,7 +24,7 @@ interface NavSection {
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly brand = 'Material Site';
+  protected readonly year = new Date().getFullYear();
 
   // Каталог компонентов по официальным категориям Angular Material.
   // ready: false => пункт виден как «скоро» и неактивен. Когда добавляем

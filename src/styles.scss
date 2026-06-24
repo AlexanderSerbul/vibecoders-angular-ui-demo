@@ -135,6 +135,13 @@ body {
   padding: 1.25rem 1.5rem;
 }
 
+/* Логотип GitHub (inline SVG) — берёт цвет текста рядом */
+.gh-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
 /* ---------- Top-menu helpers (mat-menu content lives in an overlay,
               so these must be global, not component-scoped) ---------- */
 .soon {

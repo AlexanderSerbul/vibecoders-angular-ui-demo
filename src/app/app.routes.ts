@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./demos/home').then((m) => m.HomePage),
-    title: 'Material Site — каталог компонентов',
+    title: 'Angular 22 для вайбкодера',
   },
   {
     path: 'buttons',
