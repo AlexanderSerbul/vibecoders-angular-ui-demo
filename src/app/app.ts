@@ -66,7 +66,7 @@ export class App {
     {
       label: 'Кнопки и индикаторы',
       items: [
-        { label: 'Кнопки', path: 'buttons', ready: false },
+        { label: 'Кнопки', path: 'buttons', ready: true },
         { label: 'Кнопки-переключатели', path: 'button-toggle', ready: false },
         { label: 'Иконки', path: 'icon', ready: false },
         { label: 'Бейдж', path: 'badge', ready: false },
