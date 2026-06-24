@@ -45,3 +45,9 @@ Thumbs.db
 
 # Claude Code (keep launch.json shared, ignore local machine-specific settings)
 .claude/settings.local.json
+
+# Playwright
+/test-results
+/playwright-report
+/playwright/.cache
+/blob-report
