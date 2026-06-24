@@ -16,6 +16,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/button-toggle').then((m) => m.ButtonTogglePage),
     title: 'Кнопки-переключатели',
   },
+  {
+    path: 'icon',
+    loadComponent: () => import('./demos/icon').then((m) => m.IconPage),
+    title: 'Иконки',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
