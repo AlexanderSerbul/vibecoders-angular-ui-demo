@@ -26,6 +26,16 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/badge').then((m) => m.BadgePage),
     title: 'Бейдж',
   },
+  {
+    path: 'progress-spinner',
+    loadComponent: () => import('./demos/progress-spinner').then((m) => m.ProgressSpinnerPage),
+    title: 'Прогресс (круг)',
+  },
+  {
+    path: 'progress-bar',
+    loadComponent: () => import('./demos/progress-bar').then((m) => m.ProgressBarPage),
+    title: 'Прогресс (полоса)',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
