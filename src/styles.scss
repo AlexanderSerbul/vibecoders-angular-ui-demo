@@ -104,6 +104,30 @@ body {
   max-width: 420px;
 }
 
+/* Объяснение «простым языком» + ненавязчивая подсказка с кодом (для всех демо-страниц) */
+.explain {
+  max-width: 70ch;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.api {
+  font-family: ui-monospace, monospace;
+  font-size: 0.7em;
+  font-weight: 400;
+  background: var(--mat-sys-surface-container-high);
+  color: var(--mat-sys-on-surface-variant);
+  padding: 2px 8px;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+.explain .api {
+  margin-left: 0;
+  font-size: 0.85em;
+}
+
 /* ---------- Top-menu helpers (mat-menu content lives in an overlay,
               so these must be global, not component-scoped) ---------- */
 .soon {
