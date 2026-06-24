@@ -1,0 +1,60 @@
+<mat-toolbar class="topbar">
+  <a class="brand" routerLink="/">
+    <mat-icon class="brand-icon">hexagon</mat-icon>
+    <span>{{ brand }}</span>
+  </a>
+
+  <nav class="nav">
+    @for (section of sections; track section.label) {
+      <button matButton [matMenuTriggerFor]="sectionMenu">
+        {{ section.label }}
+        <mat-icon class="caret">arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #sectionMenu="matMenu">
+        @for (item of section.items; track item.path) {
+          @if (item.ready) {
+            <a mat-menu-item [routerLink]="'/' + item.path">{{ item.label }}</a>
+          } @else {
+            <button mat-menu-item disabled>
+              {{ item.label }}
+              <span class="soon">скоро</span>
+            </button>
+          }
+        }
+      </mat-menu>
+    }
+  </nav>
+
+  <span class="spacer"></span>
+
+  <button class="nav-mobile" matIconButton [matMenuTriggerFor]="mobileMenu" aria-label="Открыть меню">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #mobileMenu="matMenu">
+    @for (section of sections; track section.label) {
+      <div class="menu-heading">{{ section.label }}</div>
+      @for (item of section.items; track item.path) {
+        @if (item.ready) {
+          <a mat-menu-item [routerLink]="'/' + item.path">{{ item.label }}</a>
+        } @else {
+          <button mat-menu-item disabled>
+            {{ item.label }}
+            <span class="soon">скоро</span>
+          </button>
+        }
+      }
+    }
+  </mat-menu>
+
+  <a
+    matIconButton
+    href="https://material.angular.dev"
+    target="_blank"
+    rel="noopener"
+    aria-label="Документация Angular Material"
+  >
+    <mat-icon>open_in_new</mat-icon>
+  </a>
+</mat-toolbar>
+
+<router-outlet />

@@ -1,0 +1,98 @@
+// Angular Material theming (Material 3). Defines the --mat-sys-* CSS variables.
+// https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  // Light color theme by default. Change to `dark` or `light dark`
+  // to follow the user's system preference.
+  color-scheme: light;
+
+  margin: 0;
+  height: 100%;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+}
+
+/* ---------- Shared demo-page layout (used by every component page) ---------- */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 4rem;
+}
+
+.page > h1 {
+  font: var(--mat-sys-headline-medium);
+  margin: 0 0 0.25rem;
+}
+
+.page > .lead {
+  margin: 0 0 2rem;
+  max-width: 70ch;
+  color: var(--mat-sys-on-surface-variant);
+  font: var(--mat-sys-body-large);
+}
+
+.demo-section {
+  margin-bottom: 2.5rem;
+}
+
+.demo-section > h2 {
+  font: var(--mat-sys-title-large);
+  margin: 0 0 1rem;
+}
+
+.demo-section > .demo-note {
+  margin: 0 0 1rem;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.demo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 420px;
+}
+
+/* ---------- Top-menu helpers (mat-menu content lives in an overlay,
+              so these must be global, not component-scoped) ---------- */
+.soon {
+  margin-left: 0.75rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+}
+
+.menu-heading {
+  padding: 0.5rem 1rem 0.25rem;
+  font: var(--mat-sys-label-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--mat-sys-primary);
+}
