@@ -128,6 +128,13 @@ body {
   font-size: 0.85em;
 }
 
+/* «Попробуйте сами» — выделенный блок (для всех демо-страниц) */
+.try {
+  background: var(--mat-sys-surface-container-low);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
 /* ---------- Top-menu helpers (mat-menu content lives in an overlay,
               so these must be global, not component-scoped) ---------- */
 .soon {

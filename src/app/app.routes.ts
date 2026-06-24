@@ -21,6 +21,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/icon').then((m) => m.IconPage),
     title: 'Иконки',
   },
+  {
+    path: 'badge',
+    loadComponent: () => import('./demos/badge').then((m) => m.BadgePage),
+    title: 'Бейдж',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

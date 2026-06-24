@@ -70,7 +70,7 @@ export class App {
         { label: 'Кнопки', path: 'buttons', ready: true },
         { label: 'Кнопки-переключатели', path: 'button-toggle', ready: true },
         { label: 'Иконки', path: 'icon', ready: true },
-        { label: 'Бейдж', path: 'badge', ready: false },
+        { label: 'Бейдж', path: 'badge', ready: true },
         { label: 'Прогресс (круг)', path: 'progress-spinner', ready: false },
         { label: 'Прогресс (полоса)', path: 'progress-bar', ready: false },
       ],
