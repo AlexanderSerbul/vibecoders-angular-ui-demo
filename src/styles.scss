@@ -1,9 +1,13 @@
 // Angular Material theming (Material 3). Defines the --mat-sys-* CSS variables.
+// Each mat.theme() emits light-dark() pairs, so the same palette works in both
+// light and dark — the mode is chosen by `color-scheme` (set by ThemeService).
 // https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+// Базовая палитра (azure) — действует, пока на <html> нет класса другой темы.
 html {
   height: 100%;
+  color-scheme: light;
   @include mat.theme((
     color: (
       primary: mat.$azure-palette,
@@ -14,11 +18,32 @@ html {
   ));
 }
 
-body {
-  // Light color theme by default. Change to `dark` or `light dark`
-  // to follow the user's system preference.
-  color-scheme: light;
+// Альтернативные цветные палитры — переключаются классом theme-* на <html>.
+html.theme-green {
+  @include mat.theme((
+    color: (primary: mat.$green-palette, tertiary: mat.$cyan-palette),
+    typography: Roboto,
+    density: 0,
+  ));
+}
 
+html.theme-violet {
+  @include mat.theme((
+    color: (primary: mat.$violet-palette, tertiary: mat.$magenta-palette),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+html.theme-rose {
+  @include mat.theme((
+    color: (primary: mat.$rose-palette, tertiary: mat.$orange-palette),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
   margin: 0;
   height: 100%;
   background-color: var(--mat-sys-surface);
@@ -95,4 +120,20 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--mat-sys-primary);
+}
+
+/* ---------- Theme colour-picker swatch (also rendered in a menu overlay) ---------- */
+.swatch {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  vertical-align: middle;
+}
+
+.swatch-check {
+  margin-left: 8px;
+  vertical-align: middle;
 }
