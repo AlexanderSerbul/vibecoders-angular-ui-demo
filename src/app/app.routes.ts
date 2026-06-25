@@ -51,6 +51,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/tooltip').then((m) => m.TooltipPage),
     title: 'Подсказка',
   },
+  {
+    path: 'bottom-sheet',
+    loadComponent: () => import('./demos/bottom-sheet').then((m) => m.BottomSheetPage),
+    title: 'Нижний лист',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
