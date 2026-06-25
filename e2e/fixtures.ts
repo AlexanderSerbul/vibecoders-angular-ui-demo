@@ -9,14 +9,20 @@ export const test = base.extend<{ consoleGuard: void }>({
   consoleGuard: [
     async ({ page }, use) => {
       const errors: string[] = [];
+      // Игнорируем сторонний шум, не относящийся к приложению: GitHub API (звёзды
+      // Angular на главной) и безобидный браузерный «ResizeObserver loop».
+      const ignore = (text: string, url = ''): boolean =>
+        url.includes('github.com') ||
+        text.includes('github.com') ||
+        text.includes('ResizeObserver loop');
+
       page.on('console', (msg) => {
         if (msg.type() !== 'error') return;
-        // Сторонний GitHub API (звёзды Angular на главной) — его лимиты/сеть не наша ошибка.
-        const url = msg.location()?.url ?? '';
-        if (url.includes('github.com') || msg.text().includes('github.com')) return;
-        errors.push(msg.text());
+        if (!ignore(msg.text(), msg.location()?.url ?? '')) errors.push(msg.text());
       });
-      page.on('pageerror', (err) => errors.push(err.message));
+      page.on('pageerror', (err) => {
+        if (!ignore(err.message)) errors.push(err.message);
+      });
 
       await use();
 

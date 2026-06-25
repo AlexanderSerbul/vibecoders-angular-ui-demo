@@ -56,6 +56,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/bottom-sheet').then((m) => m.BottomSheetPage),
     title: 'Нижний лист',
   },
+  {
+    path: 'form-field',
+    loadComponent: () => import('./demos/form-field').then((m) => m.FormFieldPage),
+    title: 'Поле ввода',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

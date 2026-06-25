@@ -16,7 +16,8 @@ test.describe('Главная', () => {
   test('раздел меню раскрывается, пункты помечены «скоро»', async ({ page }) => {
     await page.goto('/');
 
-    await page.getByRole('button', { name: 'Поля и контролы форм' }).click();
+    // открываем ещё не начатый раздел — все его пункты помечены «скоро» и неактивны
+    await page.getByRole('button', { name: 'Макет' }).click();
 
     const menu = page.getByRole('menu');
     await expect(menu).toBeVisible();

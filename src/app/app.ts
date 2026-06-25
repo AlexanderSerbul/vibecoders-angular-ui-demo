@@ -33,7 +33,7 @@ export class App {
     {
       label: 'Поля и контролы форм',
       items: [
-        { label: 'Поле ввода', path: 'form-field', ready: false },
+        { label: 'Поле ввода', path: 'form-field', ready: true },
         { label: 'Выпадающий список', path: 'select', ready: false },
         { label: 'Автодополнение', path: 'autocomplete', ready: false },
         { label: 'Чекбокс', path: 'checkbox', ready: false },
