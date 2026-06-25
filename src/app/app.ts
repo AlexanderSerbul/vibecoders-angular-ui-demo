@@ -78,7 +78,7 @@ export class App {
     {
       label: 'Поповеры и модалки',
       items: [
-        { label: 'Диалог', path: 'dialog', ready: false },
+        { label: 'Диалог', path: 'dialog', ready: true },
         { label: 'Нижний лист', path: 'bottom-sheet', ready: false },
         { label: 'Снэкбар', path: 'snackbar', ready: false },
         { label: 'Подсказка', path: 'tooltip', ready: false },

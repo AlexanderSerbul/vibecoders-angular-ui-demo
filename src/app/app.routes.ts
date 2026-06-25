@@ -36,6 +36,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/progress-bar').then((m) => m.ProgressBarPage),
     title: 'Прогресс (полоса)',
   },
+  {
+    path: 'dialog',
+    loadComponent: () => import('./demos/dialog').then((m) => m.DialogPage),
+    title: 'Диалог',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
