@@ -61,6 +61,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/form-field').then((m) => m.FormFieldPage),
     title: 'Поле ввода',
   },
+  {
+    path: 'checkbox',
+    loadComponent: () => import('./demos/checkbox').then((m) => m.CheckboxPage),
+    title: 'Чекбокс',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

@@ -36,7 +36,7 @@ export class App {
         { label: 'Поле ввода', path: 'form-field', ready: true },
         { label: 'Выпадающий список', path: 'select', ready: false },
         { label: 'Автодополнение', path: 'autocomplete', ready: false },
-        { label: 'Чекбокс', path: 'checkbox', ready: false },
+        { label: 'Чекбокс', path: 'checkbox', ready: true },
         { label: 'Радио-кнопки', path: 'radio', ready: false },
         { label: 'Переключатель', path: 'slide-toggle', ready: false },
         { label: 'Слайдер', path: 'slider', ready: false },
