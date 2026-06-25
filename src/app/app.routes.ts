@@ -41,6 +41,16 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/dialog').then((m) => m.DialogPage),
     title: 'Диалог',
   },
+  {
+    path: 'snackbar',
+    loadComponent: () => import('./demos/snackbar').then((m) => m.SnackbarPage),
+    title: 'Снэкбар',
+  },
+  {
+    path: 'tooltip',
+    loadComponent: () => import('./demos/tooltip').then((m) => m.TooltipPage),
+    title: 'Подсказка',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

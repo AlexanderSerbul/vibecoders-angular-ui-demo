@@ -80,8 +80,8 @@ export class App {
       items: [
         { label: 'Диалог', path: 'dialog', ready: true },
         { label: 'Нижний лист', path: 'bottom-sheet', ready: false },
-        { label: 'Снэкбар', path: 'snackbar', ready: false },
-        { label: 'Подсказка', path: 'tooltip', ready: false },
+        { label: 'Снэкбар', path: 'snackbar', ready: true },
+        { label: 'Подсказка', path: 'tooltip', ready: true },
       ],
     },
     {
