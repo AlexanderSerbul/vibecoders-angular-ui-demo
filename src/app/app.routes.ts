@@ -66,6 +66,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/checkbox').then((m) => m.CheckboxPage),
     title: 'Чекбокс',
   },
+  {
+    path: 'radio',
+    loadComponent: () => import('./demos/radio').then((m) => m.RadioPage),
+    title: 'Радио-кнопки',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
