@@ -49,7 +49,7 @@ export class App {
       items: [
         { label: 'Меню', path: 'menu', ready: true },
         { label: 'Боковая панель', path: 'sidenav', ready: true },
-        { label: 'Тулбар', path: 'toolbar', ready: false },
+        { label: 'Тулбар', path: 'toolbar', ready: true },
       ],
     },
     {

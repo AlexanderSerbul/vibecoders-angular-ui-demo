@@ -111,6 +111,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/sidenav').then((m) => m.SidenavPage),
     title: 'Боковая панель',
   },
+  {
+    path: 'toolbar',
+    loadComponent: () => import('./demos/toolbar').then((m) => m.ToolbarPage),
+    title: 'Тулбар',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
