@@ -41,7 +41,7 @@ export class App {
         { label: 'Переключатель', path: 'slide-toggle', ready: true },
         { label: 'Слайдер', path: 'slider', ready: true },
         { label: 'Дата', path: 'datepicker', ready: true },
-        { label: 'Чипы', path: 'chips', ready: false },
+        { label: 'Чипы', path: 'chips', ready: true },
       ],
     },
     {

@@ -96,6 +96,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/datepicker').then((m) => m.DatepickerPage),
     title: 'Дата',
   },
+  {
+    path: 'chips',
+    loadComponent: () => import('./demos/chips').then((m) => m.ChipsPage),
+    title: 'Чипы',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
