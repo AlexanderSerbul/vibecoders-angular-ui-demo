@@ -61,7 +61,7 @@ export class App {
         { label: 'Списки', path: 'list', ready: true },
         { label: 'Шаги', path: 'stepper', ready: true },
         { label: 'Дерево', path: 'tree', ready: true },
-        { label: 'Разделитель', path: 'divider', ready: false },
+        { label: 'Разделитель', path: 'divider', ready: true },
       ],
     },
     {

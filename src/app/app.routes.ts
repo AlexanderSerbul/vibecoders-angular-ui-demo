@@ -146,6 +146,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/tree').then((m) => m.TreePage),
     title: 'Дерево',
   },
+  {
+    path: 'divider',
+    loadComponent: () => import('./demos/divider').then((m) => m.DividerPage),
+    title: 'Разделитель',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
