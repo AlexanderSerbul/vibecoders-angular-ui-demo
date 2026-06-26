@@ -48,7 +48,7 @@ export class App {
       label: 'Навигация',
       items: [
         { label: 'Меню', path: 'menu', ready: true },
-        { label: 'Боковая панель', path: 'sidenav', ready: false },
+        { label: 'Боковая панель', path: 'sidenav', ready: true },
         { label: 'Тулбар', path: 'toolbar', ready: false },
       ],
     },

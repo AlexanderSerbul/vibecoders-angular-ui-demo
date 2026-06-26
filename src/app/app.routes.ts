@@ -106,6 +106,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/menu').then((m) => m.MenuPage),
     title: 'Меню',
   },
+  {
+    path: 'sidenav',
+    loadComponent: () => import('./demos/sidenav').then((m) => m.SidenavPage),
+    title: 'Боковая панель',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
