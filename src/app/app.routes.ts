@@ -86,6 +86,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/select').then((m) => m.SelectPage),
     title: 'Выпадающий список',
   },
+  {
+    path: 'autocomplete',
+    loadComponent: () => import('./demos/autocomplete').then((m) => m.AutocompletePage),
+    title: 'Автодополнение',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
