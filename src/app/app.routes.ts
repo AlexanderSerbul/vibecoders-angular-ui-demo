@@ -151,6 +151,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/divider').then((m) => m.DividerPage),
     title: 'Разделитель',
   },
+  {
+    path: 'table',
+    loadComponent: () => import('./demos/table').then((m) => m.TablePage),
+    title: 'Таблица',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

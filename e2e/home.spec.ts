@@ -13,15 +13,15 @@ test.describe('Главная', () => {
     await expect(page.locator('nav.nav > button')).toHaveCount(6);
   });
 
-  test('раздел меню раскрывается, пункты помечены «скоро»', async ({ page }) => {
+  test('раздел меню: ещё не готовые пункты помечены «скоро» и неактивны', async ({ page }) => {
     await page.goto('/');
 
-    // открываем ещё не начатый раздел — все его пункты помечены «скоро» и неактивны
+    // в разделе «Таблицы данных» ещё не всё готово — «Сортировка» помечена «скоро»
     await page.getByRole('button', { name: 'Таблицы данных' }).click();
 
     const menu = page.getByRole('menu');
     await expect(menu).toBeVisible();
-    await expect(menu.getByRole('menuitem').first()).toBeDisabled();
+    await expect(menu.getByRole('menuitem', { name: 'Сортировка' })).toBeDisabled();
   });
 
   test('показывает блок «для вайбкодеров» с фразами и ссылкой на исходники', async ({ page }) => {
