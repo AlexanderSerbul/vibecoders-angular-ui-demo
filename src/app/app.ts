@@ -58,7 +58,7 @@ export class App {
         { label: 'Карточка', path: 'cards', ready: true },
         { label: 'Вкладки', path: 'tabs', ready: true },
         { label: 'Раскрывающиеся панели', path: 'expansion', ready: true },
-        { label: 'Списки', path: 'list', ready: false },
+        { label: 'Списки', path: 'list', ready: true },
         { label: 'Шаги', path: 'stepper', ready: false },
         { label: 'Дерево', path: 'tree', ready: false },
         { label: 'Разделитель', path: 'divider', ready: false },

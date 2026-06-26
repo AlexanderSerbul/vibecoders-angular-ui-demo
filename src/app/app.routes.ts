@@ -131,6 +131,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/expansion').then((m) => m.ExpansionPage),
     title: 'Раскрывающиеся панели',
   },
+  {
+    path: 'list',
+    loadComponent: () => import('./demos/list').then((m) => m.ListPage),
+    title: 'Списки',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
