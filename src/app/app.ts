@@ -40,7 +40,7 @@ export class App {
         { label: 'Радио-кнопки', path: 'radio', ready: true },
         { label: 'Переключатель', path: 'slide-toggle', ready: true },
         { label: 'Слайдер', path: 'slider', ready: true },
-        { label: 'Дата', path: 'datepicker', ready: false },
+        { label: 'Дата', path: 'datepicker', ready: true },
         { label: 'Чипы', path: 'chips', ready: false },
       ],
     },

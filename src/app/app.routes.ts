@@ -91,6 +91,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/autocomplete').then((m) => m.AutocompletePage),
     title: 'Автодополнение',
   },
+  {
+    path: 'datepicker',
+    loadComponent: () => import('./demos/datepicker').then((m) => m.DatepickerPage),
+    title: 'Дата',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
