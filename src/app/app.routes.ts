@@ -81,6 +81,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/slider').then((m) => m.SliderPage),
     title: 'Слайдер',
   },
+  {
+    path: 'select',
+    loadComponent: () => import('./demos/select').then((m) => m.SelectPage),
+    title: 'Выпадающий список',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
