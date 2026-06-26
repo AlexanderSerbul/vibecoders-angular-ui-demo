@@ -59,7 +59,7 @@ export class App {
         { label: 'Вкладки', path: 'tabs', ready: true },
         { label: 'Раскрывающиеся панели', path: 'expansion', ready: true },
         { label: 'Списки', path: 'list', ready: true },
-        { label: 'Шаги', path: 'stepper', ready: false },
+        { label: 'Шаги', path: 'stepper', ready: true },
         { label: 'Дерево', path: 'tree', ready: false },
         { label: 'Разделитель', path: 'divider', ready: false },
       ],
