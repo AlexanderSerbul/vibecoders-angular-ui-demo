@@ -60,7 +60,7 @@ export class App {
         { label: 'Раскрывающиеся панели', path: 'expansion', ready: true },
         { label: 'Списки', path: 'list', ready: true },
         { label: 'Шаги', path: 'stepper', ready: true },
-        { label: 'Дерево', path: 'tree', ready: false },
+        { label: 'Дерево', path: 'tree', ready: true },
         { label: 'Разделитель', path: 'divider', ready: false },
       ],
     },
