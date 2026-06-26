@@ -39,7 +39,7 @@ export class App {
         { label: 'Чекбокс', path: 'checkbox', ready: true },
         { label: 'Радио-кнопки', path: 'radio', ready: true },
         { label: 'Переключатель', path: 'slide-toggle', ready: true },
-        { label: 'Слайдер', path: 'slider', ready: false },
+        { label: 'Слайдер', path: 'slider', ready: true },
         { label: 'Дата', path: 'datepicker', ready: false },
         { label: 'Чипы', path: 'chips', ready: false },
       ],

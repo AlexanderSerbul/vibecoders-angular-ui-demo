@@ -76,6 +76,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/slide-toggle').then((m) => m.SlideTogglePage),
     title: 'Переключатель',
   },
+  {
+    path: 'slider',
+    loadComponent: () => import('./demos/slider').then((m) => m.SliderPage),
+    title: 'Слайдер',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
