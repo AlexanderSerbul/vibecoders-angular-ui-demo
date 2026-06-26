@@ -71,6 +71,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/radio').then((m) => m.RadioPage),
     title: 'Радио-кнопки',
   },
+  {
+    path: 'slide-toggle',
+    loadComponent: () => import('./demos/slide-toggle').then((m) => m.SlideTogglePage),
+    title: 'Переключатель',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

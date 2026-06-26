@@ -38,7 +38,7 @@ export class App {
         { label: 'Автодополнение', path: 'autocomplete', ready: false },
         { label: 'Чекбокс', path: 'checkbox', ready: true },
         { label: 'Радио-кнопки', path: 'radio', ready: true },
-        { label: 'Переключатель', path: 'slide-toggle', ready: false },
+        { label: 'Переключатель', path: 'slide-toggle', ready: true },
         { label: 'Слайдер', path: 'slider', ready: false },
         { label: 'Дата', path: 'datepicker', ready: false },
         { label: 'Чипы', path: 'chips', ready: false },
