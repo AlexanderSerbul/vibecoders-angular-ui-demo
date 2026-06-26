@@ -17,7 +17,7 @@ test.describe('Главная', () => {
     await page.goto('/');
 
     // открываем ещё не начатый раздел — все его пункты помечены «скоро» и неактивны
-    await page.getByRole('button', { name: 'Макет' }).click();
+    await page.getByRole('button', { name: 'Таблицы данных' }).click();
 
     const menu = page.getByRole('menu');
     await expect(menu).toBeVisible();
