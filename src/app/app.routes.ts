@@ -121,6 +121,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/cards').then((m) => m.CardsPage),
     title: 'Карточка',
   },
+  {
+    path: 'tabs',
+    loadComponent: () => import('./demos/tabs').then((m) => m.TabsPage),
+    title: 'Вкладки',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];

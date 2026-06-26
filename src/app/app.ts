@@ -56,7 +56,7 @@ export class App {
       label: 'Макет',
       items: [
         { label: 'Карточка', path: 'cards', ready: true },
-        { label: 'Вкладки', path: 'tabs', ready: false },
+        { label: 'Вкладки', path: 'tabs', ready: true },
         { label: 'Раскрывающиеся панели', path: 'expansion', ready: false },
         { label: 'Списки', path: 'list', ready: false },
         { label: 'Шаги', path: 'stepper', ready: false },
