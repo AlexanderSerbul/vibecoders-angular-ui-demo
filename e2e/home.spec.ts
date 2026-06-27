@@ -13,15 +13,16 @@ test.describe('Главная', () => {
     await expect(page.locator('nav.nav > button')).toHaveCount(6);
   });
 
-  test('раздел меню: ещё не готовые пункты помечены «скоро» и неактивны', async ({ page }) => {
+  test('каталог собран — в меню больше нет пунктов «скоро»', async ({ page }) => {
     await page.goto('/');
 
-    // в разделе «Таблицы данных» ещё не всё готово — «Сортировка» помечена «скоро»
+    // последний компонент готов — отключённых пунктов «скоро» в меню не осталось
     await page.getByRole('button', { name: 'Таблицы данных' }).click();
 
     const menu = page.getByRole('menu');
     await expect(menu).toBeVisible();
-    await expect(menu.getByRole('menuitem', { name: 'Сортировка' })).toBeDisabled();
+    await expect(menu.getByRole('menuitem', { name: 'Сортировка', exact: true })).toBeVisible();
+    await expect(menu.locator('.soon')).toHaveCount(0);
   });
 
   test('показывает блок «для вайбкодеров» с фразами и ссылкой на исходники', async ({ page }) => {
