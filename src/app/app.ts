@@ -92,5 +92,9 @@ export class App {
         { label: 'Сортировка', path: 'sort', ready: true },
       ],
     },
+    {
+      label: 'Продвижение',
+      items: [{ label: 'Поиск и SEO', path: 'seo', ready: true }],
+    },
   ];
 }

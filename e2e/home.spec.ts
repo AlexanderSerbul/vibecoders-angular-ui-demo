@@ -9,8 +9,8 @@ test.describe('Главная', () => {
       page.getByRole('heading', { name: 'Каталог компонентов Angular Material' }),
     ).toBeVisible();
 
-    // 6 разделов в верхнем меню (desktop-ширина вьюпорта по умолчанию)
-    await expect(page.locator('nav.nav > button')).toHaveCount(6);
+    // 7 разделов в верхнем меню (6 категорий компонентов + «Продвижение»)
+    await expect(page.locator('nav.nav > button')).toHaveCount(7);
   });
 
   test('каталог собран — в меню больше нет пунктов «скоро»', async ({ page }) => {
