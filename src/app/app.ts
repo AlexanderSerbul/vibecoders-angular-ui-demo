@@ -88,7 +88,7 @@ export class App {
       label: 'Таблицы данных',
       items: [
         { label: 'Таблица', path: 'table', ready: true },
-        { label: 'Пагинатор', path: 'paginator', ready: false },
+        { label: 'Пагинатор', path: 'paginator', ready: true },
         { label: 'Сортировка', path: 'sort', ready: false },
       ],
     },

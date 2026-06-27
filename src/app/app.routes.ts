@@ -156,6 +156,11 @@ export const routes: Routes = [
     loadComponent: () => import('./demos/table').then((m) => m.TablePage),
     title: 'Таблица',
   },
+  {
+    path: 'paginator',
+    loadComponent: () => import('./demos/paginator').then((m) => m.PaginatorPage),
+    title: 'Пагинатор',
+  },
   // Демо-страницы компонентов добавляются по одной выше этой строки.
   { path: '**', redirectTo: '' },
 ];
