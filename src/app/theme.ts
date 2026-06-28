@@ -1,4 +1,5 @@
-import { Injectable, effect, signal } from '@angular/core';
+import { Injectable, effect, inject, PLATFORM_ID, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 export type ThemeColor = 'azure' | 'green' | 'violet' | 'rose';
 export type ThemeMode = 'light' | 'dark' | 'system';
@@ -12,6 +13,8 @@ export type ThemeMode = 'light' | 'dark' | 'system';
  */
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
   readonly color = signal<ThemeColor>(this.stored('color', 'azure'));
   readonly mode = signal<ThemeMode>(this.stored('mode', 'light'));
 
@@ -19,6 +22,8 @@ export class ThemeService {
     effect(() => {
       const color = this.color();
       const mode = this.mode();
+      // На сервере (prerender) DOM не трогаем — тему применяет браузер при гидрации.
+      if (!this.isBrowser) return;
       const html = document.documentElement;
 
       html.classList.remove('theme-azure', 'theme-green', 'theme-violet', 'theme-rose');

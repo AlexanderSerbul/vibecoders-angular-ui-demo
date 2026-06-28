@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Injectable, ViewChild } from '@angular/core';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator, MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 
@@ -17,6 +17,7 @@ const ORDERS: Order[] = Array.from({ length: 23 }, (_, i) => ({
 }));
 
 // Русские подписи листалки (по умолчанию Material подписывает их по-английски).
+@Injectable()
 class RuPaginatorIntl extends MatPaginatorIntl {
   override itemsPerPageLabel = 'Строк на странице:';
   override nextPageLabel = 'Следующая страница';

@@ -23,8 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
           В значении пишешь, что показать (число или короткий текст).
         </p>
         <div class="demo-row big-icons">
-          <mat-icon matBadge="4" matBadgeDescription="4 новых уведомления">notifications</mat-icon>
-          <mat-icon matBadge="12" matBadgeDescription="12 писем">mail</mat-icon>
+          <mat-icon aria-hidden="false" matBadge="4" matBadgeDescription="4 новых уведомления">notifications</mat-icon>
+          <mat-icon aria-hidden="false" matBadge="12" matBadgeDescription="12 писем">mail</mat-icon>
           <button matButton="tonal" matBadge="3" matBadgeDescription="3 новых сообщения">
             Сообщения
           </button>
@@ -38,9 +38,9 @@ import { MatIconModule } from '@angular/material/icon';
           новые сообщения, ошибки, «требует внимания».
         </p>
         <div class="demo-row big-icons">
-          <mat-icon matBadge="8" matBadgeDescription="8 элементов">inbox</mat-icon>
-          <mat-icon matBadge="8" matBadgeColor="primary" matBadgeDescription="8 элементов">inbox</mat-icon>
-          <mat-icon matBadge="8" matBadgeColor="warn" matBadgeDescription="8 важных">inbox</mat-icon>
+          <mat-icon aria-hidden="false" matBadge="8" matBadgeDescription="8 элементов">inbox</mat-icon>
+          <mat-icon aria-hidden="false" matBadge="8" matBadgeColor="primary" matBadgeDescription="8 элементов">inbox</mat-icon>
+          <mat-icon aria-hidden="false" matBadge="8" matBadgeColor="warn" matBadgeDescription="8 важных">inbox</mat-icon>
         </div>
       </section>
 
@@ -51,11 +51,11 @@ import { MatIconModule } from '@angular/material/icon';
           а если число большое — показывают «99+», чтобы не растягивать кружок.
         </p>
         <div class="demo-row big-icons">
-          <mat-icon matBadge="99+" matBadgeDescription="больше 99">notifications</mat-icon>
-          <mat-icon matBadge="1" matBadgePosition="above before" matBadgeDescription="1 новое">
+          <mat-icon aria-hidden="false" matBadge="99+" matBadgeDescription="больше 99">notifications</mat-icon>
+          <mat-icon aria-hidden="false" matBadge="1" matBadgePosition="above before" matBadgeDescription="1 новое">
             notifications
           </mat-icon>
-          <mat-icon matBadge="1" matBadgePosition="below after" matBadgeDescription="1 новое">
+          <mat-icon aria-hidden="false" matBadge="1" matBadgePosition="below after" matBadgeDescription="1 новое">
             notifications
           </mat-icon>
         </div>

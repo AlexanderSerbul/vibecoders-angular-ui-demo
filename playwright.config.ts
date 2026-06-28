@@ -10,7 +10,9 @@ export default defineConfig({
   testDir: './e2e',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
+  // 1 повтор: SSR-сервер рендерит каждую страницу на сервере, и на холодном старте
+  // под параллельной нагрузкой случайный тест изредка ловит таймаут — повтор это лечит.
+  retries: process.env.CI ? 2 : 1,
   reporter: process.env.CI ? 'html' : 'list',
   use: {
     baseURL: 'http://localhost:4200',

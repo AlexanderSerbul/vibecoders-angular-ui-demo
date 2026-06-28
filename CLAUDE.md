@@ -16,6 +16,15 @@
 - Новый API кнопок Material: `matButton`, `matButton="filled|outlined|tonal|elevated"`, `matIconButton`, `matFab`/`matMiniFab`.
 - Standalone-компоненты, ленивые маршруты.
 
+## Рендеринг (SSG / prerender)
+Сборка делает **статический prerender всех маршрутов**: `@angular/ssr`, в `angular.json`
+`outputMode: "static"`, гидрация через `provideClientHydration()`. В собранном HTML уже лежит
+контент (быстрый первый экран + видно поисковикам), а в браузере страница «оживает» гидрацией.
+`npm run build` → «Prerendered N static routes»; прод-превью (`prod`) отдаёт `dist/homepage/browser`.
+**Важно:** любой код, трогающий браузерные API при инициализации (`document`, `window`,
+`localStorage`, `fetch`), оборачиваем в `afterNextRender(...)` или `isPlatformBrowser(...)` —
+иначе prerender падает на сервере (примеры: `theme.ts`, `home.ts`).
+
 ## Как добавляем страницу компонента (по одной за раз)
 1. `src/app/demos/<name>.ts` — standalone-компонент, inline-шаблон, общие классы `.page` / `.demo-*` из `src/styles.scss`.
 2. Маршрут (lazy `loadComponent`) в `src/app/app.routes.ts`.

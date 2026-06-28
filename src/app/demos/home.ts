@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, afterNextRender, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -124,12 +124,15 @@ export class HomePage {
   protected readonly stars = signal(100447);
 
   constructor() {
-    // Живое число звёзд Angular с GitHub. Если не вышло (лимит/оффлайн) — просто не покажем.
-    fetch('https://api.github.com/repos/angular/angular')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (d && typeof d.stargazers_count === 'number') this.stars.set(d.stargazers_count);
-      })
-      .catch(() => {});
+    // Только в браузере (не во время prerender): живое число звёзд Angular с GitHub.
+    // Если не вышло (лимит/оффлайн) — остаётся запасное число.
+    afterNextRender(() => {
+      fetch('https://api.github.com/repos/angular/angular')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (d && typeof d.stargazers_count === 'number') this.stars.set(d.stargazers_count);
+        })
+        .catch(() => {});
+    });
   }
 }

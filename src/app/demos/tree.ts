@@ -31,11 +31,13 @@ interface FileNode {
           <button matButton (click)="tree.collapseAll()">Свернуть всё</button>
         </div>
         <mat-tree #tree="matTree" [dataSource]="data" [childrenAccessor]="childrenAccessor" class="tree">
-          <mat-tree-node *matTreeNodeDef="let node">
-            <span class="toggle-spacer"></span>
-            <mat-icon class="node-icon file">description</mat-icon>
-            <span>{{ node.name }}</span>
-          </mat-tree-node>
+          <mat-nested-tree-node *matTreeNodeDef="let node">
+            <div class="tree-row">
+              <span class="toggle-spacer"></span>
+              <mat-icon class="node-icon file">description</mat-icon>
+              <span>{{ node.name }}</span>
+            </div>
+          </mat-nested-tree-node>
 
           <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
             <div class="tree-row">
